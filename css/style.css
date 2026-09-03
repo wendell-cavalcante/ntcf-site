@@ -227,6 +227,10 @@ body {
 }
 .menu-toggle svg { width: 24px; height: 24px; margin: auto; }
 
+.nav-close {
+  display: none;
+}
+
 /* ---------- Hero ---------- */
 .hero {
   position: relative;
@@ -594,6 +598,7 @@ body.nav-open .nav-scrim { opacity: 1; pointer-events: auto; }
   .main-nav .nav-links { display: flex; flex-direction: column; gap: 22px; }
   .main-nav .btn-gold { width: 100%; }
   .nav-close {
+    display: block;
     position: absolute; top: 22px; right: 22px;
     background: none; border: none; color: var(--cream-100);
     width: 36px; height: 36px;
