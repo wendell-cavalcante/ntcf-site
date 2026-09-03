@@ -23,7 +23,19 @@
         <div class="brand-sub">${SITE_DATA.marca.slogan}</div>
       </div>`;
   }
-  renderBrand($("#brand-slot"));
+
+  function renderBrandLogo(target) {
+    target.innerHTML = `
+      <div class="brand-crest brand-crest-img">
+        <img src="assets/img/logo.png" alt="${SITE_DATA.marca.nome}">
+      </div>
+      <div>
+        <div class="brand-name">${SITE_DATA.marca.nome}</div>
+        <div class="brand-sub">${SITE_DATA.marca.slogan}</div>
+      </div>`;
+  }
+
+  renderBrandLogo($("#brand-slot"));
   renderBrand($("#footer-brand-slot"));
 
   /* ================= RENDER: NAV ================= */
@@ -62,7 +74,7 @@
   $("#sobre-titulo").textContent = SITE_DATA.quemSomos.titulo;
   $("#sobre-paragrafos").innerHTML = SITE_DATA.quemSomos.paragrafos
     .map(p => `<p>${p}</p>`).join("");
-  $("#sobre-crest").innerHTML = ICONS.crest;
+  $("#sobre-crest").innerHTML = `<img src="assets/img/logo.png" alt="${SITE_DATA.marca.nome}">`;
   $("#sobre-crest-nome").textContent = SITE_DATA.marca.nome;
 
   $("#pilares").innerHTML = SITE_DATA.quemSomos.pilares.map((pilar, i) => `
