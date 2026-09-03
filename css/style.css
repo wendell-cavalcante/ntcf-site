@@ -913,6 +913,19 @@ body.nav-open .nav-scrim {
   pointer-events: auto;
 }
 
+/* Bloqueia a seleção em toda a página */
+body {
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none;    /* Firefox */
+  -ms-user-select: none;     /* IE / Edge antigo */
+  user-select: none;         /* Padrão */
+}
+
+/* Se tiver algum input ou textarea onde o usuário precise digitar, mantenha liberado */
+input, textarea {
+  user-select: auto;
+}
+
 /* =================================================================
    Responsivo
    ================================================================= */
