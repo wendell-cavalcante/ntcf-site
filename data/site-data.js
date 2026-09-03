@@ -2,8 +2,7 @@
  * data/site-data.js
  * ---------------------------------------------------------------
  * Conteúdo institucional do site: navegação, textos do hero,
- * quem somos, contato e redes sociais. Separado do HTML para que
- * o conteúdo possa ser atualizado sem tocar na estrutura da página.
+ * quem somos, contato e redes sociais.
  * ---------------------------------------------------------------
  */
 
@@ -57,16 +56,18 @@ const SITE_DATA = {
   },
 
   contato: {
-  telefone: "(11) 99812-8504",
-  email: "contato@ntcf.com.br",
-  endereco: "Rua das Ciências, 123 — São Paulo, SP, 01000-000",
-  whatsapp: "https://wa.me/5511998128504"
-},
+    telefone: "(11) 99812-8504",
+    email: "peritoforenseguilhermelima@gmail.com",
+    endereco: "Rua das Ciências, 123 — São Paulo, SP, 01000-000",
+    whatsapp: "https://wa.me/5511998128504"
+  },
 
   redesSociais: [
-    { nome: "LinkedIn", icone: "linkedin", href: "#" },
-    { nome: "Instagram", icone: "instagram", href: "#" },
-    { nome: "Facebook", icone: "facebook", href: "#" }
+    {
+      nome: "Instagram",
+      icone: "instagram",
+      href: "https://www.instagram.com/peritoforenseguilhermelima/"
+    }
   ],
 
   rodape: {
