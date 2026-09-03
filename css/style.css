@@ -608,7 +608,7 @@ body.nav-open .nav-scrim { opacity: 1; pointer-events: auto; }
 @media (max-width: 600px) {
   section { padding-block: 64px; }
   .hero-inner { padding-block: 44px 40px; }
-  .pericias-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .pericias-grid { grid-template-columns: 1fr; gap: 16px; }
   .pericia-card { padding: 22px 16px; }
   .pericia-icon { width: 36px; height: 36px; margin-bottom: 14px; }
   .footer-grid { grid-template-columns: 1fr; gap: 36px; }
