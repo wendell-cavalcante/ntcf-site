@@ -1,11 +1,3 @@
-/**
- * data/site-data.js
- * ---------------------------------------------------------------
- * Conteúdo institucional do site: navegação, textos do hero,
- * quem somos, contato e redes sociais.
- * ---------------------------------------------------------------
- */
-
 const SITE_DATA = {
   marca: {
     nome: "NTCF",
@@ -56,10 +48,9 @@ const SITE_DATA = {
   },
 
   contato: {
-    telefone: "(11) 99812-8504",
+    telefone: "(11) 99161-1204",
     email: "peritoforenseguilhermelima@gmail.com",
-    endereco: "Rua das Ciências, 123 — São Paulo, SP, 01000-000",
-    whatsapp: "https://wa.me/5511998128504"
+    whatsapp: "https://wa.me/5511991611204"
   },
 
   redesSociais: [
