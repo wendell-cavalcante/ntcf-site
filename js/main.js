@@ -81,7 +81,7 @@
   $("#footer-contact").innerHTML = `
     <li>${ICONS.telefone}<a href="tel:${SITE_DATA.contato.telefone.replace(/\D/g,"")}">${SITE_DATA.contato.telefone}</a></li>
     <li>${ICONS.mail}<a href="mailto:${SITE_DATA.contato.email}">${SITE_DATA.contato.email}</a></li>
-    <li>${ICONS.pin}<span>${SITE_DATA.contato.endereco}</span></li>
+   
   `;
 
   $("#social-row").innerHTML = SITE_DATA.redesSociais.map(r =>
