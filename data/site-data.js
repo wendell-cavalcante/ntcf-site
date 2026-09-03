@@ -57,11 +57,11 @@ const SITE_DATA = {
   },
 
   contato: {
-    telefone: "(11) 99999-9999",
-    email: "contato@ntcf.com.br",
-    endereco: "Rua das Ciências, 123 — São Paulo, SP, 01000-000",
-    whatsapp: "https://wa.me/5511999999999"
-  },
+  telefone: "(11) 99812-8504",
+  email: "contato@ntcf.com.br",
+  endereco: "Rua das Ciências, 123 — São Paulo, SP, 01000-000",
+  whatsapp: "https://wa.me/5511998128504"
+},
 
   redesSociais: [
     { nome: "LinkedIn", icone: "linkedin", href: "#" },
