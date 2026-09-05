@@ -3,134 +3,649 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NTCF — Núcleo Técnico-Científico Forense</title>
-  <meta name="description" content="NTCF Núcleo Técnico-Científico Forense — perícia é ciência, ética é nosso compromisso.">
 
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+  <title>NTCF — Núcleo Técnico-Científico Forense</title>
+
+  <meta
+    name="description"
+    content="NTCF Núcleo Técnico-Científico Forense — perícia é ciência, ética é nosso compromisso."
+  >
+
+  <link
+    rel="apple-touch-icon"
+    sizes="180x180"
+    href="assets/img/apple-touch-icon.png"
+  >
+
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="assets/img/favicon-32x32.png"
+  >
+
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="16x16"
+    href="assets/img/favicon-16x16.png"
+  >
+
   <link rel="manifest" href="assets/site.webmanifest">
 
-  <!-- Content Security Policy (CSP) contra injeções de scripts externos -->
-  <meta http-equiv="Content-Security-Policy" content="
-    default-src 'self';
-    script-src 'self';
-    style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
-    font-src 'self' https://fonts.gstatic.com;
-    img-src 'self' data:;
-    connect-src 'none';
-    frame-ancestors 'none';
-  ">
+  <!-- Content Security Policy -->
+  <meta
+    http-equiv="Content-Security-Policy"
+    content="
+      default-src 'self';
+      script-src 'self';
+      style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+      font-src 'self' https://fonts.gstatic.com;
+      img-src 'self' data:;
+      connect-src 'none';
+      frame-ancestors 'none';
+    "
+  >
 
-  <!-- Referrer Policy restritiva -->
-  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta
+    name="referrer"
+    content="strict-origin-when-cross-origin"
+  >
 
+  <!-- Fontes -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
 
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- CSS principal -->
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
-<!-- ======================= HEADER ======================= -->
-<header class="site-header" id="site-header">
-  <div class="container header-inner">
-    <a href="#inicio" class="brand" id="brand-slot"></a>
+  <!-- =========================================================
+       HEADER
+       ========================================================= -->
+  <header class="site-header" id="site-header">
 
-    <nav class="main-nav" id="main-nav">
-      <button class="nav-close" id="nav-close" aria-label="Fechar menu"></button>
-      <ul class="nav-links" id="nav-links"></ul>
-      <a href="#contato" class="btn btn-gold" id="nav-cta"></a>
-    </nav>
+    <div class="container header-inner">
 
-    <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu"></button>
-  </div>
-</header>
-<div class="nav-scrim" id="nav-scrim"></div>
+      <a
+        href="#inicio"
+        class="brand"
+        id="brand-slot"
+      ></a>
 
-<!-- ======================= HERO ======================= -->
-<section class="hero" id="inicio">
-  <div class="container hero-inner">
-    <div class="hero-copy">
-      <span class="tag hero-eyebrow" id="hero-eyebrow"></span>
-      <h1 class="hero-title" id="hero-title"></h1>
-      <p class="hero-subtitle" id="hero-subtitle"></p>
-      <p class="hero-text" id="hero-text"></p>
-      <div class="hero-buttons">
-        <a href="#contato" class="btn btn-gold" id="hero-cta"></a>
+      <nav
+        class="main-nav"
+        id="main-nav"
+      >
+
+        <button
+          class="nav-close"
+          id="nav-close"
+          aria-label="Fechar menu"
+          type="button"
+        ></button>
+
+        <ul
+          class="nav-links"
+          id="nav-links"
+        ></ul>
+
+        <a
+          href="#contato"
+          class="btn btn-gold"
+          id="nav-cta"
+        ></a>
+
+      </nav>
+
+      <button
+        class="menu-toggle"
+        id="menu-toggle"
+        aria-label="Abrir menu"
+        type="button"
+      ></button>
+
+    </div>
+
+  </header>
+
+  <div
+    class="nav-scrim"
+    id="nav-scrim"
+  ></div>
+
+
+  <!-- =========================================================
+       HERO
+       ========================================================= -->
+  <section
+    class="hero"
+    id="inicio"
+  >
+
+    <div class="container hero-inner">
+
+      <div class="hero-copy">
+
+        <span
+          class="tag hero-eyebrow"
+          id="hero-eyebrow"
+        ></span>
+
+        <h1
+          class="hero-title"
+          id="hero-title"
+        ></h1>
+
+        <p
+          class="hero-subtitle"
+          id="hero-subtitle"
+        ></p>
+
+        <p
+          class="hero-text"
+          id="hero-text"
+        ></p>
+
+        <div class="hero-buttons">
+
+          <a
+            href="#contato"
+            class="btn btn-gold"
+            id="hero-cta"
+          ></a>
+
+        </div>
+
       </div>
-    </div>
 
-    <div class="hero-media" data-reveal>
-      <div class="crest-scan">
-        <div class="brand-crest" id="hero-crest"></div>
+
+      <div
+        class="hero-media"
+        data-reveal
+      >
+
+        <div class="crest-scan">
+
+          <div
+            class="brand-crest"
+            id="hero-crest"
+          ></div>
+
+        </div>
+
+        <p
+          class="hero-media-name"
+          id="hero-media-name"
+        ></p>
+
+        <div
+          class="divider-dot center"
+          style="max-width:120px"
+        ></div>
+
+        <p
+          class="hero-media-tag"
+          id="hero-media-tag"
+        ></p>
+
       </div>
-      <p class="hero-media-name" id="hero-media-name"></p>
-      <div class="divider-dot center" style="max-width:120px"></div>
-      <p class="hero-media-tag" id="hero-media-tag"></p>
-    </div>
-  </div>
-</section>
 
-<!-- ======================= PERÍCIAS ======================= -->
-<section class="pericias" id="pericias">
-  <div class="container">
-    <div class="section-head" data-reveal>
-      <span class="tag section-eyebrow">Especialidades</span>
-      <h2 class="section-title" style="margin-top:16px">Tipos de Perícias</h2>
     </div>
-    <div class="pericias-grid" id="pericias-grid" data-reveal-group></div>
-  </div>
-</section>
 
-<!-- ======================= QUEM SOMOS ======================= -->
-<section class="quem-somos" id="quem-somos">
-  <div class="container quem-somos-inner">
-    <div class="quem-somos-media" data-reveal>
-      <div class="quem-somos-media-crest">
-        <div class="brand-crest" id="sobre-crest"></div>
-        <span id="sobre-crest-nome"></span>
+  </section>
+
+
+  <!-- =========================================================
+       PERÍCIAS
+       ========================================================= -->
+  <section
+    class="pericias"
+    id="pericias"
+  >
+
+    <div class="container">
+
+      <div
+        class="section-head"
+        data-reveal
+      >
+
+        <span class="tag section-eyebrow">
+          Especialidades
+        </span>
+
+        <h2
+          class="section-title"
+          style="margin-top:16px"
+        >
+          Tipos de Perícias
+        </h2>
+
       </div>
+
+      <div
+        class="pericias-grid"
+        id="pericias-grid"
+        data-reveal-group
+      ></div>
+
     </div>
 
-    <div class="quem-somos-text" data-reveal>
-      <span class="tag section-eyebrow" id="sobre-eyebrow"></span>
-      <h2 class="section-title" style="margin-top:16px; text-align:left" id="sobre-titulo"></h2>
-      <div id="sobre-paragrafos"></div>
-      <div class="pilares" id="pilares"></div>
+  </section>
+
+
+  <!-- =========================================================
+       QUEM SOMOS
+       ========================================================= -->
+  <section
+    class="quem-somos"
+    id="quem-somos"
+  >
+
+    <div class="container quem-somos-inner">
+
+      <div
+        class="quem-somos-media"
+        data-reveal
+      >
+
+        <div class="quem-somos-media-crest">
+
+          <div
+            class="brand-crest"
+            id="sobre-crest"
+          ></div>
+
+          <span id="sobre-crest-nome"></span>
+
+        </div>
+
+      </div>
+
+
+      <div
+        class="quem-somos-text"
+        data-reveal
+      >
+
+        <span
+          class="tag section-eyebrow"
+          id="sobre-eyebrow"
+        ></span>
+
+        <h2
+          class="section-title"
+          style="margin-top:16px; text-align:left"
+          id="sobre-titulo"
+        ></h2>
+
+        <div id="sobre-paragrafos"></div>
+
+        <div
+          class="pilares"
+          id="pilares"
+        ></div>
+
+      </div>
+
     </div>
+
+  </section>
+
+
+  <!-- =========================================================
+       RODAPÉ / CONTATO
+       ========================================================= -->
+  <footer
+    class="site-footer"
+    id="contato"
+  >
+
+    <div class="container footer-grid">
+
+      <div class="footer-brand">
+
+        <div
+          class="brand"
+          id="footer-brand-slot"
+        ></div>
+
+        <p
+          id="footer-slogan"
+        ></p>
+
+      </div>
+
+
+      <div>
+
+        <h3 class="footer-heading">
+          Contatos
+        </h3>
+
+        <ul
+          class="footer-contact"
+          id="footer-contact"
+        ></ul>
+
+      </div>
+
+
+      <div>
+
+        <h3 class="footer-heading">
+          Redes Sociais
+        </h3>
+
+        <div
+          class="social-row"
+          id="social-row"
+        ></div>
+
+      </div>
+
+    </div>
+
+
+    <div
+      class="container footer-bottom"
+      id="footer-bottom"
+    ></div>
+
+  </footer>
+
+
+  <!-- =========================================================
+       BOTÃO FLUTUANTE DO WHATSAPP
+       ========================================================= -->
+  <a
+    class="whatsapp-float"
+    id="whatsapp-btn"
+    href="#"
+    aria-label="Falar no WhatsApp"
+  ></a>
+
+
+  <!-- =========================================================
+       MODAL DE ATENDIMENTO / FORMULÁRIO
+       ========================================================= -->
+  <div
+    class="contact-modal"
+    id="contact-modal"
+    aria-hidden="true"
+  >
+
+    <div
+      class="contact-modal-backdrop"
+      id="contact-modal-backdrop"
+    ></div>
+
+
+    <div
+      class="contact-modal-dialog"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="contact-modal-title"
+    >
+
+      <!-- Fechar -->
+      <button
+        class="contact-modal-close"
+        id="contact-modal-close"
+        type="button"
+        aria-label="Fechar formulário"
+      >
+        ×
+      </button>
+
+
+      <!-- Cabeçalho -->
+      <div class="contact-modal-header">
+
+        <span class="tag section-eyebrow">
+          Atendimento
+        </span>
+
+        <h2 id="contact-modal-title">
+          Solicite atendimento
+        </h2>
+
+        <p>
+          Preencha os campos abaixo para nos ajudar a entender melhor
+          sua demanda. O preenchimento é
+          <strong>opcional</strong>.
+        </p>
+
+      </div>
+
+
+      <!-- Formulário -->
+      <form id="contact-form">
+
+        <!-- Nome -->
+        <div class="form-field">
+
+          <label for="contact-name">
+            Nome <span>(opcional)</span>
+          </label>
+
+          <input
+            type="text"
+            id="contact-name"
+            name="name"
+            placeholder="Digite seu nome"
+            maxlength="100"
+            autocomplete="name"
+          >
+
+        </div>
+
+
+        <!-- Tipo de perícia -->
+        <div class="form-field">
+
+          <label for="contact-type">
+            Tipo de demanda / perícia
+            <span>(opcional)</span>
+          </label>
+
+          <select
+            id="contact-type"
+            name="type"
+          >
+
+            <option value="">
+              Selecione o tipo de perícia
+            </option>
+
+            <option value="Toxicologia Forense">
+              Toxicologia Forense
+            </option>
+
+            <option value="Química Forense e Envenenamentos">
+              Química Forense e Envenenamentos
+            </option>
+
+            <option value="Perícia Digital">
+              Perícia Digital
+            </option>
+
+            <option value="Documentoscopia">
+              Documentoscopia
+            </option>
+
+            <option value="Balística Forense">
+              Balística Forense
+            </option>
+
+            <option value="Outra demanda">
+              Outra demanda
+            </option>
+
+          </select>
+
+        </div>
+
+
+        <!-- Relato -->
+        <div class="form-field">
+
+          <label for="contact-message">
+
+            Relato / descrição
+            <span>(opcional)</span>
+
+          </label>
+
+          <textarea
+            id="contact-message"
+            name="message"
+            rows="5"
+            maxlength="1000"
+            placeholder="Descreva brevemente sua demanda ou dúvida"
+          ></textarea>
+
+          <div class="form-counter">
+
+            <span id="contact-counter">
+              0
+            </span>/1000
+
+          </div>
+
+        </div>
+
+
+        <!-- Documento -->
+        <div class="form-field">
+
+          <label for="contact-file">
+
+            Documento
+            <span>(opcional)</span>
+
+          </label>
+
+
+          <label
+            class="file-upload"
+            for="contact-file"
+          >
+
+            <div class="file-upload-icon">
+
+              <span id="form-file-icon"></span>
+
+            </div>
+
+
+            <div class="file-upload-content">
+
+              <strong>
+                Selecionar arquivo
+              </strong>
+
+              <span>
+                PDF, JPG, PNG, DOC ou DOCX
+              </span>
+
+            </div>
+
+          </label>
+
+
+          <input
+            type="file"
+            id="contact-file"
+            name="file"
+            accept=".pdf,.jpg,.jpeg,.png,.doc,.docx"
+          >
+
+
+          <div
+            class="file-selected"
+            id="file-selected"
+          ></div>
+
+
+          <small>
+            O documento não é enviado automaticamente para o WhatsApp.
+            Caso necessário, você poderá enviá-lo diretamente na conversa.
+          </small>
+
+        </div>
+
+
+        <!-- Ações -->
+        <div class="form-actions">
+
+          <button
+            type="submit"
+            class="btn btn-gold form-submit"
+          >
+
+            <span
+              class="form-whatsapp-icon"
+              id="form-whatsapp-icon"
+            ></span>
+
+            Continuar para o WhatsApp
+
+          </button>
+
+
+          <button
+            type="button"
+            class="form-skip"
+            id="contact-skip"
+          >
+
+            Pular formulário e falar diretamente
+
+            <span>
+              →
+            </span>
+
+          </button>
+
+        </div>
+
+
+        <!-- Segurança -->
+        <p class="form-security">
+          Seus dados serão utilizados apenas para fins de atendimento.
+        </p>
+
+      </form>
+
+    </div>
+
   </div>
-</section>
 
-<!-- ======================= RODAPÉ / CONTATO ======================= -->
-<footer class="site-footer" id="contato">
-  <div class="container footer-grid">
-    <div class="footer-brand">
-      <div class="brand" id="footer-brand-slot"></div>
-      <p id="footer-slogan"></p>
-    </div>
 
-    <div>
-      <h3 class="footer-heading">Contatos</h3>
-      <ul class="footer-contact" id="footer-contact"></ul>
-    </div>
+  <!-- =========================================================
+       SCRIPTS
+       ========================================================= -->
 
-    <div>
-      <h3 class="footer-heading">Redes Sociais</h3>
-      <div class="social-row" id="social-row"></div>
-    </div>
-  </div>
+  <script src="assets/icons/icons.js"></script>
 
-  <div class="container footer-bottom" id="footer-bottom"></div>
-</footer>
+  <script src="data/site-data.js"></script>
 
-<a class="whatsapp-float" id="whatsapp-btn" href="#" target="_blank" rel="noopener noreferrer" aria-label="Falar no WhatsApp"></a>
+  <script src="data/pericias.js"></script>
 
-<!-- ======================= SCRIPTS ======================= -->
-<script src="assets/icons/icons.js"></script>
-<script src="data/site-data.js"></script>
-<script src="data/pericias.js"></script>
-<script src="js/main.js"></script>
+  <script src="js/main.js"></script>
+
 </body>
 </html>
