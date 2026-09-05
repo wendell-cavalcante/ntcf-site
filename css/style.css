@@ -611,6 +611,61 @@ section {
   margin: 0;
 }
 
+/* ---------- Perícias: "Saiba mais" (revelar mais cards) ---------- */
+.pericias-extra-wrap {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition:
+    max-height .7s var(--ease),
+    opacity .5s var(--ease);
+}
+
+.pericias-extra-wrap.is-open {
+  max-height: 2600px;
+  opacity: 1;
+}
+
+.pericias-extra-grid {
+  margin-top: 22px;
+}
+
+.pericia-card--extra {
+  opacity: 0;
+  transform: translateY(26px) scale(.97);
+  transition:
+    opacity .6s var(--ease),
+    transform .6s var(--ease);
+  transition-delay: 0s;
+}
+
+.pericias-extra-wrap.is-open .pericia-card--extra {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  transition-delay: calc(var(--i, 0) * 80ms);
+}
+
+.pericias-toggle-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.pericias-toggle {
+  gap: 10px;
+}
+
+.pericias-toggle-icon {
+  display: inline-flex;
+  width: 16px;
+  height: 16px;
+  transition: transform .4s var(--ease);
+}
+
+.pericias-toggle.is-active .pericias-toggle-icon {
+  transform: rotate(180deg);
+}
+
 /* ---------- Quem somos ---------- */
 .quem-somos {
   background: var(--cream-200);

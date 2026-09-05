@@ -80,6 +80,66 @@ const ICONS = {
     <path d="M16 3C9.4 3 4 8.4 4 15c0 2.3.7 4.5 1.9 6.4L4 29l7.8-1.9A12.9 12.9 0 0 0 16 27c6.6 0 12-5.4 12-12S22.6 3 16 3Zm0 22.2c-2 0-3.9-.5-5.5-1.5l-.4-.2-4.2 1 1.1-4.1-.3-.4A9.9 9.9 0 0 1 6.1 15c0-5.5 4.4-9.9 9.9-9.9s9.9 4.4 9.9 9.9-4.4 9.9-9.9 9.9Zm5.4-7.4c-.3-.1-1.7-.9-2-1s-.5-.1-.7.1-.8 1-.9 1.2-.3.2-.6.1a8.1 8.1 0 0 1-4-3.5c-.3-.5.3-.5.8-1.6.1-.2 0-.4 0-.5L13 9.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.2-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3 4.8 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 2-1.4.2-.7.2-1.2.1-1.4-.1-.1-.3-.2-.6-.3Z"/>
   </svg>`,
 
+  tuboEnsaio: `<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M9 2v9.7a3 3 0 0 0 .9 2.14l2.3 2.26a3 3 0 0 0 4.2 0l2.3-2.26A3 3 0 0 0 19 11.7V2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M7 2h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+    <path d="M9.6 14.5h8.8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+    <circle cx="11.5" cy="17.3" r="0.9" fill="currentColor"/>
+    <circle cx="14.3" cy="19.2" r="0.6" fill="currentColor"/>
+  </svg>`,
+
+  frascoQuimico: `<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M10 2h4M10 2v6.7L5.4 17a2 2 0 0 0 1.8 2.9h9.6A2 2 0 0 0 18.6 17L14 8.7V2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M7.6 14.3h8.8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+    <circle cx="10.2" cy="17.4" r="0.7" fill="currentColor"/>
+    <circle cx="13.6" cy="18.8" r="0.5" fill="currentColor"/>
+  </svg>`,
+
+  monitorLupa: `<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect x="3" y="4" width="18" height="12.5" rx="1.5" stroke="currentColor" stroke-width="1.6"/>
+    <path d="M8.5 20h7M12 16.5V20" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+    <circle cx="10.3" cy="9.6" r="2.7" stroke="currentColor" stroke-width="1.4"/>
+    <path d="M12.4 11.7 15 14.3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+  </svg>`,
+
+  documento: `<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M7 3h7l4 4v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+    <path d="M14 3v4h4" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+    <path d="M8.6 16 14.6 12l1.5 1.5L10 17.4l-2.1.6.7-2Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/>
+  </svg>`,
+
+  alvo: `<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="1.6"/>
+    <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.4"/>
+    <circle cx="12" cy="12" r="0.9" fill="currentColor"/>
+    <path d="M12 1.5v3.2M12 19.3v3.2M1.5 12h3.2M19.3 12h3.2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+  </svg>`,
+
+  carroAcidente: `<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M4.2 15.6v-3.1a2 2 0 0 1 .5-1.3l1.7-2a2 2 0 0 1 1.5-.7h8.2a2 2 0 0 1 1.5.7l1.7 2a2 2 0 0 1 .5 1.3v3.1" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+    <path d="M3.2 15.6h17.6v1.9a1 1 0 0 1-1 1h-1.9a1 1 0 0 1-1-1v-.9H7.1v.9a1 1 0 0 1-1 1H4.2a1 1 0 0 1-1-1v-1.9Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+    <circle cx="7.6" cy="15.6" r="1.3" stroke="currentColor" stroke-width="1.3"/>
+    <circle cx="16.4" cy="15.6" r="1.3" stroke="currentColor" stroke-width="1.3"/>
+    <path d="M6.3 8.9h11.4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+  </svg>`,
+
+  laudoCheck: `<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M8 4.5h8a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1V5.5a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+    <path d="M9.5 3h5a1 1 0 0 1 1 1v1.5h-7V4a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+    <path d="M9.4 13l1.8 1.8L14.6 11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M9.4 17.4h5.2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+  </svg>`,
+
+  balanca: `<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M12 3v18M8.2 21h7.6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+    <path d="M12 6.3 5 8.2M12 6.3l7 1.9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+    <path d="M5 8.2 2.6 13a2.4 2.4 0 0 0 4.8 0L5 8.2ZM19 8.2l-2.4 4.8a2.4 2.4 0 0 0 4.8 0L19 8.2Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+  </svg>`,
+
+  chevronBaixo: `<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M6 9.5 12 15l6-5.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>`,
+
   crest: `<svg viewBox="0 0 120 130" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M60 6 104 20v34c0 30-19 50-44 68C35 104 16 84 16 54V20L60 6Z" stroke="currentColor" stroke-width="2"/>
     <path d="M60 14 97 25.5v28.4c0 26-16.6 43.6-37 59-20.4-15.4-37-33-37-59V25.5L60 14Z" stroke="currentColor" stroke-width="1.2" opacity="0.6"/>

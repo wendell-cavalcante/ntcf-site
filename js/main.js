@@ -175,36 +175,116 @@
   /* ================= RENDER: PERÍCIAS ================= */
 
   const periciasGrid = $("#pericias-grid");
+  const periciasExtraGrid = $("#pericias-extra-grid");
+  const periciasExtraWrap = $("#pericias-extra-wrap");
+  const periciasToggle = $("#pericias-toggle");
+  const periciasToggleText = $("#pericias-toggle-text");
+  const periciasToggleIcon = $("#pericias-toggle-icon");
+
+  /*
+   * Quantidade de cards exibidos de imediato.
+   * O restante fica oculto até o clique em "Saiba mais".
+   */
+  const PERICIAS_INITIAL_COUNT = 3;
+
+  function createPericiaCard(p, i, isExtra) {
+    const card = document.createElement("article");
+
+    card.className = isExtra
+      ? "pericia-card pericia-card--extra"
+      : "pericia-card";
+
+    card.style.setProperty("--i", i);
+
+    if (!isExtra) {
+      card.setAttribute("data-reveal", "");
+    }
+
+    const code = document.createElement("span");
+    code.className = "pericia-code";
+    code.textContent = p.codigo;
+
+    const icon = document.createElement("div");
+    icon.className = "pericia-icon";
+    icon.innerHTML = ICONS[p.icone] || "";
+
+    const title = document.createElement("h3");
+    title.className = "pericia-title";
+    title.textContent = p.titulo;
+
+    const desc = document.createElement("p");
+    desc.className = "pericia-desc";
+    desc.textContent = p.descricao;
+
+    card.append(code, icon, title, desc);
+    return card;
+  }
 
   if (periciasGrid) {
     periciasGrid.replaceChildren();
 
-    PERICIAS_DATA.forEach((p, i) => {
-      const card = document.createElement("article");
+    const iniciais = PERICIAS_DATA.slice(0, PERICIAS_INITIAL_COUNT);
+    const extras = PERICIAS_DATA.slice(PERICIAS_INITIAL_COUNT);
 
-      card.className = "pericia-card";
-      card.setAttribute("data-reveal", "");
-      card.style.setProperty("--i", i);
-
-      const code = document.createElement("span");
-      code.className = "pericia-code";
-      code.textContent = p.codigo;
-
-      const icon = document.createElement("div");
-      icon.className = "pericia-icon";
-      icon.innerHTML = ICONS[p.icone] || "";
-
-      const title = document.createElement("h3");
-      title.className = "pericia-title";
-      title.textContent = p.titulo;
-
-      const desc = document.createElement("p");
-      desc.className = "pericia-desc";
-      desc.textContent = p.descricao;
-
-      card.append(code, icon, title, desc);
-      periciasGrid.appendChild(card);
+    iniciais.forEach((p, i) => {
+      periciasGrid.appendChild(createPericiaCard(p, i, false));
     });
+
+    if (periciasExtraGrid) {
+      periciasExtraGrid.replaceChildren();
+
+      extras.forEach((p, i) => {
+        periciasExtraGrid.appendChild(createPericiaCard(p, i, true));
+      });
+    }
+
+    const temExtras = extras.length > 0;
+    const periciasToggleWrap = periciasToggle?.closest(".pericias-toggle-wrap");
+
+    if (!temExtras) {
+
+      if (periciasToggleWrap) {
+        periciasToggleWrap.style.display = "none";
+      }
+
+    } else if (periciasToggle && periciasToggleText && periciasExtraWrap) {
+
+      let periciasAbertas = false;
+
+      periciasToggleIcon.innerHTML = ICONS.chevronBaixo;
+
+      const setPericiasAbertas = aberto => {
+
+        periciasAbertas = aberto;
+
+        periciasExtraWrap.classList.toggle("is-open", aberto);
+        periciasToggle.classList.toggle("is-active", aberto);
+        periciasToggle.setAttribute("aria-expanded", String(aberto));
+
+        periciasToggleText.textContent = aberto
+          ? "Ver menos perícias"
+          : "Saiba mais";
+
+      };
+
+      setPericiasAbertas(false);
+
+      periciasToggle.addEventListener("click", () => {
+
+        setPericiasAbertas(!periciasAbertas);
+
+        if (!periciasAbertas) {
+
+          periciasToggle.scrollIntoView({
+            behavior: "smooth",
+            block: "nearest"
+          });
+
+        }
+
+      });
+
+    }
   }
 
 
