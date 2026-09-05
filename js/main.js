@@ -456,37 +456,7 @@
 
   const contactCounter = $("#contact-counter");
 
-  const contactFile = $("#contact-file");
-  const fileSelected = $("#file-selected");
-
-  const formFileIcon = $("#form-file-icon");
   const formWhatsappIcon = $("#form-whatsapp-icon");
-
-
-  /*
-   * Ícone de documento.
-   * Criado aqui para não depender de um nome específico
-   * no objeto ICONS.
-   */
-  if (formFileIcon) {
-    formFileIcon.innerHTML = `
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="1.7"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        aria-hidden="true"
-      >
-        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-        <path d="M14 2v6h6"/>
-        <path d="M8 13h8"/>
-        <path d="M8 17h6"/>
-      </svg>
-    `;
-  }
 
 
   /*
@@ -631,56 +601,6 @@
 
 
   /*
-   * Mostra o nome do arquivo selecionado.
-   *
-   * O arquivo NÃO é enviado automaticamente ao WhatsApp.
-   */
-  if (contactFile && fileSelected) {
-
-    contactFile.addEventListener("change", () => {
-
-      const file = contactFile.files?.[0];
-
-      if (!file) {
-
-        fileSelected.textContent = "";
-        fileSelected.classList.remove("is-visible");
-
-        return;
-      }
-
-
-      /*
-       * Limite visual de 10 MB.
-       */
-      const maxSize = 10 * 1024 * 1024;
-
-      if (file.size > maxSize) {
-
-        alert(
-          "O arquivo selecionado ultrapassa o limite de 10 MB."
-        );
-
-        contactFile.value = "";
-
-        fileSelected.textContent = "";
-        fileSelected.classList.remove("is-visible");
-
-        return;
-      }
-
-
-      fileSelected.textContent =
-        `Arquivo selecionado: ${file.name}`;
-
-      fileSelected.classList.add("is-visible");
-
-    });
-
-  }
-
-
-  /*
    * Monta a mensagem que será enviada ao WhatsApp.
    */
   function createWhatsappMessage() {
@@ -693,9 +613,6 @@
 
     const message =
       contactMessage?.value.trim() || "";
-
-    const file =
-      contactFile?.files?.[0] || null;
 
 
     const lines = [];
@@ -729,21 +646,6 @@
       lines.push("");
       lines.push("Relato:");
       lines.push(message);
-
-    }
-
-
-    if (file) {
-
-      lines.push("");
-
-      lines.push(
-        `Tenho um documento para enviar: ${file.name}.`
-      );
-
-      lines.push(
-        "Posso encaminhá-lo por aqui no WhatsApp."
-      );
 
     }
 
