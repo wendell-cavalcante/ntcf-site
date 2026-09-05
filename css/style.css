@@ -520,6 +520,7 @@ body {
 /* ---------- Seções genéricas ---------- */
 section {
   padding-block: 96px;
+  box-shadow: 0 12px 28px -10px #0b1a38;
 }
 
 .section-head {
