@@ -1097,3 +1097,346 @@ input, textarea {
     height: 50px;
   }
 }
+/* ================================================================
+   MODAL DE ATENDIMENTO / WHATSAPP
+   ================================================================ */
+
+.contact-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  visibility: hidden;
+  opacity: 0;
+  transition:
+    opacity .3s ease,
+    visibility .3s ease;
+}
+
+.contact-modal.is-open {
+  visibility: visible;
+  opacity: 1;
+}
+
+.contact-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(7, 15, 34, .78);
+  backdrop-filter: blur(5px);
+}
+
+.contact-modal-dialog {
+  position: relative;
+  width: min(100%, 620px);
+  max-height: min(90vh, 820px);
+  overflow-y: auto;
+  background: var(--navy-950);
+  border: 1px solid rgba(220, 189, 132, .35);
+  border-radius: 6px;
+  padding: 42px 40px 34px;
+  color: var(--cream-100);
+  box-shadow:
+    0 32px 80px rgba(0,0,0,.45),
+    0 0 0 1px rgba(255,255,255,.02);
+  transform: translateY(18px) scale(.98);
+  transition: transform .35s var(--ease);
+}
+
+.contact-modal.is-open .contact-modal-dialog {
+  transform: translateY(0) scale(1);
+}
+
+.contact-modal-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 38px;
+  height: 38px;
+  border: 1px solid var(--line-dark);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--cream-200);
+  font-size: 25px;
+  line-height: 1;
+  transition:
+    background .25s ease,
+    color .25s ease,
+    border-color .25s ease;
+}
+
+.contact-modal-close:hover {
+  background: var(--gold-400);
+  border-color: var(--gold-400);
+  color: var(--navy-950);
+}
+
+.contact-modal-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.contact-modal-header .section-eyebrow {
+  color: var(--gold-300);
+}
+
+.contact-modal-header h2 {
+  margin: 16px 0 12px;
+  font-family: var(--font-display);
+  font-size: clamp(28px, 4vw, 38px);
+  font-weight: 600;
+  color: var(--cream-100);
+}
+
+.contact-modal-header p {
+  margin: 0 auto;
+  max-width: 48ch;
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--ink-400);
+}
+
+.contact-modal-header strong {
+  color: var(--gold-300);
+}
+
+.form-field {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.form-field label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--cream-200);
+}
+
+.form-field label span {
+  color: var(--ink-400);
+  font-weight: 400;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  width: 100%;
+  border: 1px solid rgba(220, 189, 132, .28);
+  border-radius: 4px;
+  background: rgba(255,255,255,.025);
+  color: var(--cream-100);
+  font-family: var(--font-body);
+  font-size: 14px;
+  outline: none;
+  transition:
+    border-color .25s ease,
+    box-shadow .25s ease,
+    background .25s ease;
+}
+
+.form-field input,
+.form-field select {
+  height: 48px;
+  padding: 0 14px;
+}
+
+.form-field textarea {
+  min-height: 130px;
+  padding: 14px;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+  color: var(--ink-400);
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  border-color: var(--gold-400);
+  background: rgba(255,255,255,.04);
+  box-shadow: 0 0 0 3px rgba(195, 156, 92, .08);
+}
+
+.form-field select {
+  appearance: auto;
+}
+
+.form-field select option {
+  background: var(--navy-900);
+  color: var(--cream-100);
+}
+
+.form-counter {
+  position: absolute;
+  right: 10px;
+  bottom: 9px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--ink-400);
+  pointer-events: none;
+}
+
+.file-upload {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 72px;
+  padding: 14px 16px;
+  border: 1px dashed var(--gold-500);
+  border-radius: 4px;
+  background: rgba(173, 131, 71, .04);
+  cursor: pointer;
+  transition:
+    background .25s ease,
+    border-color .25s ease,
+    transform .25s ease;
+}
+
+.file-upload:hover {
+  background: rgba(173, 131, 71, .09);
+  border-color: var(--gold-300);
+  transform: translateY(-1px);
+}
+
+.file-upload-icon {
+  flex: none;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold-300);
+}
+
+.file-upload-icon svg {
+  width: 26px;
+  height: 26px;
+}
+
+.file-upload-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.file-upload-content strong {
+  font-size: 13px;
+  color: var(--gold-300);
+}
+
+.file-upload-content span {
+  font-size: 11.5px;
+  color: var(--ink-400);
+}
+
+#contact-file {
+  display: none;
+}
+
+.form-field small {
+  display: block;
+  margin-top: 8px;
+  font-size: 10.5px;
+  line-height: 1.5;
+  color: var(--ink-400);
+}
+
+.file-selected {
+  display: none;
+  margin-top: 9px;
+  padding: 8px 10px;
+  border-left: 2px solid var(--gold-400);
+  background: rgba(255,255,255,.025);
+  color: var(--cream-200);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  overflow-wrap: anywhere;
+}
+
+.file-selected.is-visible {
+  display: block;
+}
+
+.form-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 26px;
+}
+
+.form-submit {
+  width: 100%;
+  border: none;
+}
+
+.form-whatsapp-icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.form-skip {
+  width: 100%;
+  min-height: 48px;
+  padding: 12px 18px;
+  background: transparent;
+  border: 1px solid rgba(195, 156, 92, .45);
+  border-radius: 4px;
+  color: var(--gold-300);
+  font-weight: 600;
+  font-size: 12.5px;
+  letter-spacing: .02em;
+  transition:
+    background .25s ease,
+    color .25s ease,
+    border-color .25s ease;
+}
+
+.form-skip span {
+  margin-left: 7px;
+  font-size: 17px;
+}
+
+.form-skip:hover {
+  background: rgba(195, 156, 92, .08);
+  border-color: var(--gold-300);
+}
+
+.form-security {
+  margin: 22px 0 0;
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  line-height: 1.6;
+  color: var(--ink-400);
+}
+
+@media (max-width: 600px) {
+
+  .contact-modal {
+    padding: 12px;
+  }
+
+  .contact-modal-dialog {
+    max-height: 94vh;
+    padding: 34px 20px 24px;
+  }
+
+  .contact-modal-header {
+    margin-bottom: 24px;
+  }
+
+  .contact-modal-header h2 {
+    font-size: 29px;
+  }
+
+  .contact-modal-close {
+    top: 12px;
+    right: 12px;
+  }
+}
