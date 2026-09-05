@@ -234,7 +234,8 @@
       periciasExtraGrid.replaceChildren();
 
       extras.forEach((p, i) => {
-        periciasExtraGrid.appendChild(createPericiaCard(p, i, true));
+        const delayIndex = i % 3;
+        periciasExtraGrid.appendChild(createPericiaCard(p, delayIndex, true));
       });
     }
 
